@@ -69,3 +69,46 @@ var Note = Backbone.Model.extend({
   }
 });
 ```
+
+##constructor / initialize
+***new Model([attributes], [options]) ***
+
+当我们开始创建model的时候，我们可以通过传递变量的初始化值来设置model。如果你定义了initalize的方法，就可以在model创建后被调用。
+
+```
+new Book({
+  title: "One Thousand and One Nights",
+  author: "Scheherazade"
+});
+```
+
+在特殊的情况下，你也可以重写model的构造函数来达到特别的效果。
+
+```
+var Library = Backbone.Model.extend({
+  constructor: function() {
+    this.books = new Books();
+    Backbone.Model.apply(this, arguments);
+  },
+  parse: function(data, options) {
+    this.books.reset(data.books);
+    return data.library;
+  }
+});
+```
+
+如果你传入了一个{collection:...}的参数，model就会获得一个collection的变量，表明了该model属于哪个collection，提供了计算model的url。model的collection属性会在你第一次传递collection的时候自动生成。如果你把它传递给构造函数，是不会自动初始化的。这个特性有时候很有用。
+
+如果你传入一个{parse:true}的参数，model的变量会在设置之前先parse一次。
+
+
+
+
+
+
+
+
+
+
+
+
