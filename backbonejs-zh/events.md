@@ -76,7 +76,7 @@ Handy for saying "the next time that X happens, do this".
 
 --------------------
 
-**listen To** ```object.listenTo(other, event, callback) ```
+**listenTo** ```object.listenTo(other, event, callback) ```
 告诉对象去监听另一个对象的一个特的事件。这样做而不是用***other.on(event, callback, object)***的好处是，**listen To**允许对象保持追事件，并且可在之后立被移。他的回调常常对象作上下文调用。
 ```
 view.listenTo(model, 'change', view.render);
@@ -95,7 +95,7 @@ view.stopListening(model);
 
 -----------------
 
-**listen TOOnce** ```object.listenToOnce(other, event, callback) ```
+**listenToOnce** ```object.listenToOnce(other, event, callback) ```
 类似listen To,但是被绑定的回调在删除前只能被调用一次.
 
 -------------------
