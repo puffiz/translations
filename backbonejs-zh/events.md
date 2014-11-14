@@ -122,31 +122,3 @@ view.stopListening(model);
 
 
 通常来说，当调用能发出事件(如model.set, collection.add等)的方法时，如果你愿意防事件被触发，你可传递```{silent: true}```作为一个选项。注意这不常用，也许这不是一个好办法。为监听的事件回调传递一个特定的标记(Passing through a specific flag in the options for your event callback to look at)，然后选择去忽略它，常常会更好。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-。
-
-
-
