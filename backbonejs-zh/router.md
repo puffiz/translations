@@ -65,7 +65,9 @@ initialize: function(options) {
 ```
 
 ## navigatei   ```router.navigate(fragment, [options]) ```
-手动到达应用程序的某个位置。如果你希望同时调用路由函数，设置```trigger```参数为```true```。为了更新路由但不在浏览器历史记录中创建一条记录,设置```replace```参数为```true```
+
+手动到达应用程序的某个位置。如果你希望同时调用路由函数，设置```trigger```参数为```true```。为了更新路由但不在浏览器历史记录中创建一条记录,设置```replace```参数为```true```   
+
 ```
 openPage: function(pageNumber) {
   this.document.pages.at(pageNumber).open();
@@ -79,6 +81,7 @@ app.navigate("help/troubleshooting", {trigger: true});
 # Or ...
 
 app.navigate("help/troubleshooting", {trigger: true, replace: true});
+
 ```
 
 ## execute   ```router.execute(callback, args)```
