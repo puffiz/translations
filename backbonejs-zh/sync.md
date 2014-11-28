@@ -30,15 +30,15 @@ end
 ```ActiveRecord::Base.include_root_in_json = falsto_json```
 
 ## ajax   Backbone.ajax = function(request) { ... };  }
-如果你想用自定义的AJAX方法，或者你的目的是不支持Jquery。ajax API,你需要通过这样设置来调整:
-```Backbone.ajax```
+如果你想用自定义的AJAX方法，或者你的目的是不支持Jquery。ajax API,你需要通过这样设置来调整: ```Backbone.ajax```  
+ 
+
 
 ## emulateHTTP   Backbone.emulateHTTP = true 
 老的服务器不支持 Backbone 默认的 REST/HTTP，此时可以开启Backbone.emulateHTTP 。设置该选项将通过 POST 方法伪造 PUT 和 DELETE 请求，此时该请求会向服务器传入名为 _method 的参数。 设置该选项同时也会向服务器发送 X-HTTP-Method-Override 头。
 
 ```
 Backbone.emulateHTTP = true;
-
 model.save();  // POST 到 "/collection/id", 附带 "_method=PUT" + header.
 ```
 
